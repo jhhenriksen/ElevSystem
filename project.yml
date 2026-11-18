@@ -1,0 +1,24 @@
+name: ElevSystem
+options:
+  bundleIdPrefix: se.sequense
+  deploymentTarget:
+    macOS: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: RPKSBC82A5
+    CODE_SIGN_STYLE: Automatic
+targets:
+  ElevSystem:
+    type: application
+    platform: macOS
+    sources: [ElevSystem]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: se.sequense.ElevSystem
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: ElevSystem
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.education
+        CODE_SIGN_ENTITLEMENTS: ElevSystem/ElevSystem.entitlements
+        ENABLE_HARDENED_RUNTIME: YES
+        DEVELOPMENT_LANGUAGE: sv
